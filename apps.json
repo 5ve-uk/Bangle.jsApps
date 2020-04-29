@@ -1553,7 +1553,7 @@
     "shortName":"HMS",
     "icon": "HMSclock.png",
     "version":"0.01",
-    "description": "Just to test Bangle.js processing speed",
+    "description": "Bold Clock with second hand to show Bangle.js redraw processing speed",
     "tags": "",
     "storage": [
       {"name":"HMSclock.app.js","url":"HMSclock.js"},

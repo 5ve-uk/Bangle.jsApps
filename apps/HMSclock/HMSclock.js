@@ -110,11 +110,11 @@ function draw_clock(){
     g.fillCircle(clock_center.x, clock_center.y, 3);
 
     // draw minute ticks. Takes long time to draw!
-    g.setColor(1,1,1);
-    for (var i=0; i<60; i++){
-        let agl = i*6+180;
-        g.drawImage(tick1.asImage(), rotate_around_x(big_wheel_x(i*6), agl, tick1), rotate_around_y(big_wheel_y(i*6), agl, tick1), {rotate:agl*p180});
-    }
+    //g.setColor(1,1,1);
+    //for (var i=0; i<60; i++){
+    //    let agl = i*6+180;
+    //    g.drawImage(tick1.asImage(), rotate_around_x(big_wheel_x(i*6), agl, tick1), rotate_around_y(big_wheel_y(i*6), agl, tick1), {rotate:agl*p180});
+    //}
 
     g.flip();
     //console.log(date);
@@ -154,7 +154,7 @@ Bangle.on('faceUp',function(up){
     }
 });
 
-g.clear();
+//g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 startTimers();

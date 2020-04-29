@@ -1548,7 +1548,7 @@
       {"name":"hidjoystick.img","url":"app-icon.js","evaluate":true}
     ]
   },
-  { "id": "hms",
+  { "id": "HMSclock",
     "name": "Hours Minutes Seconds",
     "shortName":"HMS",
     "icon": "HMSclock.png",
@@ -1556,8 +1556,8 @@
     "description": "Just to test Bangle.js processing speed",
     "tags": "",
     "storage": [
-      {"name":"hms.app.js","url":"HMSclock.js"},
-      {"name":"hms.img","url":"HMSclock-icon.js","evaluate":true}
+      {"name":"HMSclock.app.js","url":"HMSclock.js"},
+      {"name":"HMSclock.img","url":"HMSclock-icon.js","evaluate":true}
     ]
   }
 ]

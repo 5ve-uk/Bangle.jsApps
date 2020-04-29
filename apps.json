@@ -1547,5 +1547,17 @@
       {"name":"hidjoystick.app.js","url":"app.js"},
       {"name":"hidjoystick.img","url":"app-icon.js","evaluate":true}
     ]
-  }
+  },
+{ "id": "HMS",
+  "name": "Hours Minutes Seconds",
+  "shortName":"HMS",
+  "icon": "HMSclock.png",
+  "version":"0.01",
+  "description": "Just to test Bangle.js processing speed",
+  "tags": "",
+  "storage": [
+    {"name":"HMS.app.js","url":"HMSclock.js"},
+    {"name":"HMS.img","url":"HMSclock-icon.js","evaluate":true}
+  ]
+}
 ]

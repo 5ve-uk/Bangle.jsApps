@@ -17,7 +17,7 @@ g.fillRect(0,22,239,239); // Apps area
 let intervalRef = null;
 const p180 = Math.PI/180;
 //const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
-const clock_center = { x: 119, y: 133 }
+const clock_center = { x: 119, y: 134 }
 const radius = Math.floor((239-24+1)/2); // =108
 
 let tick0 = Graphics.createArrayBuffer(30,8,1);

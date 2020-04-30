@@ -13,11 +13,11 @@ var second_hand = {
     transparent : 0,
     buffer : E.toArrayBuffer(atob("/////////////////////////////////////////////////////////////////////////w=="))
 };
-g.fillRect(0,22,239,239); // Apps area
+//g.fillRect(0,21,239,239); // Apps area
 let intervalRef = null;
 const p180 = Math.PI/180;
 //const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
-const clock_center = { x: 119, y: 134 }
+const clock_center = { x: 119, y: 135 }
 const radius = Math.floor((239-24+1)/2); // =108
 
 let tick0 = Graphics.createArrayBuffer(30,8,1);
@@ -154,7 +154,7 @@ Bangle.on('faceUp',function(up){
     }
 });
 
-//g.clear();
+g.clear();
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 startTimers();

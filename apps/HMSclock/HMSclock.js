@@ -9,7 +9,7 @@ var minute_hand = {
     buffer : E.toArrayBuffer(atob("/////////////////////////////////////////////////////////////////////////w=="))
 };
 var second_hand = {
-    width : 110, height : 2, bpp : 1,
+    width : 80, height : 2, bpp : 1,
     transparent : 0,
     buffer : E.toArrayBuffer(atob("/////////////////////////////////////////////////////////////////////////w=="))
 };
@@ -17,7 +17,7 @@ var second_hand = {
 let intervalRef = null;
 const p180 = Math.PI/180;
 //const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
-const clock_center = { x: 119, y: 134 }  // best y = 134
+const clock_center = { x: 119, y: 133 }  // best y = 134 but flat base
 const radius = Math.floor((239-24+1)/2); // =108
 
 let tick0 = Graphics.createArrayBuffer(30,8,1);
@@ -101,13 +101,15 @@ function draw_clock(){
     let hour_agl = hour_angle(date);
     let minute_agl = minute_angle(date);
     let second_agl = second_angle(date);
+    g.drawImage(second_hand, second_pos_x(second_agl), second_pos_y(second_agl), {rotate:second_agl*p180}); //
     g.drawImage(hour_hand, hour_pos_x(hour_agl), hour_pos_y(hour_agl), {rotate:hour_agl*p180}); //
     g.drawImage(minute_hand, minute_pos_x(minute_agl), minute_pos_y(minute_agl), {rotate:minute_agl*p180}); //
-    g.drawImage(second_hand, second_pos_x(second_agl), second_pos_y(second_agl), {rotate:second_agl*p180}); //
+
     g.setColor(1,1,1);
     g.fillCircle(clock_center.x, clock_center.y, 6);
     g.setColor(0,0,0);
     g.fillCircle(clock_center.x, clock_center.y, 3);
+    g.drawImage(second_hand, second_pos_x(second_agl), second_pos_y(second_agl), {rotate:second_agl*p180}); //
 
     // draw minute ticks. Takes long time to draw!
     //g.setColor(1,1,1);
@@ -161,8 +163,8 @@ g.clear();
         let agl = i*6+180;
         g.drawImage(tick1.asImage(), rotate_around_x(big_wheel_x(i*6), agl, tick1), rotate_around_y(big_wheel_y(i*6), agl, tick1), {rotate:agl*p180});
     }
-Bangle.loadWidgets();
-Bangle.drawWidgets();
+//Bangle.loadWidgets();
+//Bangle.drawWidgets();
 startTimers();
 // Show launcher when middle button pressed
 setWatch(Bangle.showLauncher, BTN2, {repeat:false,edge:"falling"});

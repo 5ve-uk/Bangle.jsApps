@@ -16,8 +16,8 @@ var second_hand = {
 //g.fillRect(0,24,239,239); // Apps area
 let intervalRef = null;
 const p180 = Math.PI/180;
-const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
-// ={ x: 119, y: 131 }
+//const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
+const clock_center = { x: 119, y: 133 }
 const radius = Math.floor((239-24+1)/2); // =108
 
 let tick0 = Graphics.createArrayBuffer(30,8,1);
@@ -78,7 +78,7 @@ function draw_clock(){
     //g.clear();
     g.setBgColor(0,0,0);
     g.setColor(0,0,0);
-    g.fillRect(0,24,239,239); // clear app area
+    g.fillRect(0,23,239,239); // clear app area
     g.setColor(1,1,1);
 
     // draw cross lines for testing

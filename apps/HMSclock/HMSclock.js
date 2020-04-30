@@ -17,7 +17,7 @@ var second_hand = {
 let intervalRef = null;
 const p180 = Math.PI/180;
 //const clock_center = {x:Math.floor((240-1)/2), y:24+Math.floor((239-24)/2)};
-const clock_center = { x: 119, y: 135 }
+const clock_center = { x: 119, y: 134 }  // best y = 134
 const radius = Math.floor((239-24+1)/2); // =108
 
 let tick0 = Graphics.createArrayBuffer(30,8,1);
@@ -155,6 +155,12 @@ Bangle.on('faceUp',function(up){
 });
 
 g.clear();
+    // draw minute ticks. Takes long time to draw!
+    g.setColor(1,1,1);
+    for (var i=0; i<60; i++){
+        let agl = i*6+180;
+        g.drawImage(tick1.asImage(), rotate_around_x(big_wheel_x(i*6), agl, tick1), rotate_around_y(big_wheel_y(i*6), agl, tick1), {rotate:agl*p180});
+    }
 Bangle.loadWidgets();
 Bangle.drawWidgets();
 startTimers();
